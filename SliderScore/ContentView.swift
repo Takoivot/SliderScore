@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var targetValue = Int.random(in: 0...100)
     var body: some View {
-        Text("Hello, world!")
+        VStack{
+        Text("Подвиньте слайдер, как можно ближе к : \(targetValue)")
+            Button("Проверь меня", action: {})
+                .padding()
+            Button("Начать заново", action: {
+            })
+        }
             .padding()
     }
 }
