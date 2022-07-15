@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var targetValue = Int.random(in: 0...100)
+    @State private var targetValue = Int.random(in: 1...100)
     var body: some View {
         VStack{
         Text("Подвиньте слайдер, как можно ближе к : \(targetValue)")
             Button("Проверь меня", action: {})
                 .padding()
             Button("Начать заново", action: {
+                targetValue = Int.random(in: 1...100)
+                
             })
-        }
-            .padding()
+            }
+        .padding()
     }
-}
+           
+    }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
